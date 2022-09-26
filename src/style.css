@@ -104,13 +104,13 @@ img {
 }
 
 .link {
-  color: #000;
+  color: black;
   font-weight: bold;
   font-size: 1.3rem;
 }
 
 .active__link {
-  color: green;
+  color: var(--secondary-color);
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -127,6 +127,7 @@ img {
   font-size: 1.4rem;
   max-width: 80%;
   margin: 0 auto;
+  color: #845ec2;
 }
 
 .form__container {
@@ -140,6 +141,7 @@ img {
 
 label {
   display: block;
+  color: var(--primary-color);
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
@@ -163,7 +165,9 @@ label {
 }
 
 #search__name:hover,
-#search__name:active {
+#search__name:active,
+#search__name:focus {
+  outline-color: orangered;
   border-color: orangered;
 }
 
@@ -178,8 +182,15 @@ label {
 }
 
 .card {
+  background-color: var(--background-color);
   box-shadow: var(--box-shadow-1);
   padding: 0.5rem;
+  transition: transform 0.1s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 2px 2px #000;
+  transform: translateY(1%);
 }
 
 .content {
@@ -213,10 +224,10 @@ label {
   background-color: transparent;
   color: blue;
   font-weight: bold;
-
   text-decoration: underline;
   text-align: left;
   transition: var(--transition-8);
+  border: none;
 }
 
 .btn--learn:hover,
@@ -258,6 +269,22 @@ label {
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
   text-align: left;
+}
+
+.about h1 {
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.about p {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  color: rgb(0, 0, 0);
+  /* letter-spacing: 1px; */
+  word-break: break-all;
 }
 
 @media (min-width: 576px) {
