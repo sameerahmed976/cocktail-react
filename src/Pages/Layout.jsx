@@ -1,12 +1,15 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import image from "../../Inspire-Color.svg";
 
 const Layout = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="logo">Logo</div>
-        <ul>
+        <div className="logo">
+          <img src={image} alt="logo__image" className="logo__image" />
+        </div>
+        <ul className="nav__links">
           <li>
             <NavLink
               to="/"

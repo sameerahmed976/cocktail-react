@@ -87,7 +87,7 @@ const SingleCocktail = () => {
           <Link to="/" className="btn btn--back">
             back home
           </Link>
-          <h2 className="single__title">{name}</h2>
+
           <div className="single">
             <img src={image} alt={name}></img>
             <article className="single__card">
